@@ -21,6 +21,7 @@ useEffect(() => {
 const fetchExercisesData=async()=>{
   const bodyPartsData=await fetchData("https://exercisedb.p.rapidapi.com/exercises/bodyPartList",options);
   setbodyParts(['all',...bodyPartsData])
+  console.log(bodyPartsData,'hello')
 }
 fetchExercisesData()
 }, [])
@@ -57,6 +58,7 @@ fetchExercisesData()
         sx={{ fontSize: { lg: "44px", xs: "30px" } }}
         mb={"50px"}
         textAlign={"center"}
+        color={"#3073c9"} 
       >
         Awesome Exercises You <br /> Should Know
       </Typography>

@@ -1,10 +1,12 @@
+"use client"
 
 
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import React,{FC} from "react";
 import Image from "next/image";
 import styles from "../page.module.css";
 import Link from "next/link";
-import { Button, Stack, Typography,Box } from "@mui/material";
+import { Button,Grid, Typography,Box } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { searchData } from "../utils/types";
@@ -31,9 +33,10 @@ const SimilarTarget:FC<Target> = ({ exercise }) => {
   console.log(exercise, "ex");
   return (
     
- <Box flexDirection={'row'}>
+    <Grid container justifyContent={'center'} spacing={2}>
     
-      {exercise.map(item=>
+      {exercise.slice(0,3).map((item:any)=>
+      <Grid item key={item.id } xs={12} md={6} lg={4} >
         <Link
         key={item.id}
           href={`/exercise/${item?.id}`}
@@ -62,9 +65,10 @@ const SimilarTarget:FC<Target> = ({ exercise }) => {
           >
             {item.name}
           </Typography>
-        </Link>
+        </Link></Grid>
      ) }
-   </Box>
+   
+   </Grid>
 
   );
 };

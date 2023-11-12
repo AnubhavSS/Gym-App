@@ -51,7 +51,7 @@ const Exercises:FC<Exerc> = ({setexercises,exercises,bodyPart}) => {
   
   return (
     <Box id="exercises" sx={{mt:{lg:'110px'}}} p={'20px'} mt={'50px'}>
-      <Typography variant='h4' mb={'46px'}>
+      <Typography variant='h4' mb={'46px'} color={"#3073c9"}>
         Showing Results
       </Typography>
       <Stack direction={'row'} sx={{gap:{lg:'110px',xs:'50px'}}} flexWrap={'wrap'} justifyContent={'center'}>
@@ -63,8 +63,8 @@ const Exercises:FC<Exerc> = ({setexercises,exercises,bodyPart}) => {
 }
       </Stack>
 
-      <Stack mt={'100px'} alignItems={'center'}>
-{exercises.length>9 && <Pagination color='standard' shape='rounded' defaultPage={1}  count={Math.ceil(exercises.length/exercisesPerPage)} page={currentPage} onChange={paginate} size='large'/>}
+      <Stack mt={'100px'} bgcolor={'rgba(256,256,256,0.9)'} marginX={'auto'} borderRadius={'25px'} width={'fit-content'} alignItems={'center'}  padding={2} > 
+{exercises.length>9 && <Pagination  color="primary" shape='rounded' variant='outlined' defaultPage={1}  count={Math.ceil(exercises.length/exercisesPerPage)} page={currentPage} onChange={paginate} size='large'/>}
       </Stack>
     </Box>
   )

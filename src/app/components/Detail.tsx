@@ -21,24 +21,24 @@ const Detail:FC<DETAIL> = ({exerciseDetail}) => {
         height={390}
         loading='lazy'
       />
-       <Typography my={2} sx={{ fontSize: { lg: '24px', xs: '20px' } }} fontWeight={500} textTransform="capitalize">
+       <Typography my={2} color={"#FFFFFF"}  sx={{ fontSize: { lg: '24px', xs: '20px' } }} fontWeight={500} textTransform="capitalize">
          Body Part: {bodyPart}
         </Typography>
-        <Typography  sx={{ fontSize: { lg: '24px', xs: '20px' } }} fontWeight={500} textTransform="capitalize">
+        <Typography  color={"#FFFFFF"}  sx={{ fontSize: { lg: '24px', xs: '20px' } }} fontWeight={500} textTransform="capitalize">
         Equipment: {equipment}
         </Typography>
       </Stack>
       <Stack sx={{ gap: { lg: '35px', xs: '20px' } }}>
-        <Typography sx={{ fontSize: { lg: '54px', xs: '30px' } }} fontWeight={700} textTransform="capitalize">
+        <Typography sx={{ fontSize: { lg: '54px', xs: '30px' } }} color={"#3073c9"}  fontWeight={700} textTransform="capitalize">
           {name}
         </Typography>
-        <Typography sx={{ fontSize: { lg: '24px', xs: '18px' } }} color="#4F4C4C">
+        <Typography sx={{ fontSize: { lg: '24px', xs: '18px' } }} color={"#3073c9"} >
           Exercises keep you strong.{' '}
           <span style={{ textTransform: 'capitalize' }}>{name}</span>  is one
           of the best <br /> exercises to target your {target}.
         </Typography>
 
-        <Typography variant='h4' fontWeight={700}>Instructions</Typography>
+        <Typography variant='h4' color={"#3073c9"}  fontWeight={700}>Instructions</Typography>
         {instructions?.map((item) => (
           <Stack key={item?.name} direction="row" gap="24px" alignItems="center">
           

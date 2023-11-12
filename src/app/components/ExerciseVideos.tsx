@@ -19,11 +19,11 @@ const ExerciseVideos: FC = ({ exerciseVideos, name }) => {
         textAlign={"center"}
         sx={{ fontSize: { lg: "44px", xs: "25px" } }}
         fontWeight={700}
-        color="#000"
+        color="#FFFFFF"
         mb="33px"
       >
         Watch{" "}
-        <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
+        <span style={{ color: "#3073c9", textTransform: "capitalize" }}>
           {name}
         </span>{" "}
         exercise videos
