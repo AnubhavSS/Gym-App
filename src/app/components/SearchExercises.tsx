@@ -8,7 +8,7 @@ import HorizontalScroll from "./HorizontalScroll";
 
 interface SearchEx{
   bodyPart:string;
-  setexercises: (exercise: string) => void;
+  setexercises: (exercise: any) => void;
   setBodyPart: (exercise: string) => void;
 }
 
@@ -21,7 +21,7 @@ useEffect(() => {
 const fetchExercisesData=async()=>{
   const bodyPartsData=await fetchData("https://exercisedb.p.rapidapi.com/exercises/bodyPartList",options);
   setbodyParts(['all',...bodyPartsData])
-  console.log(bodyPartsData,'hello')
+
 }
 fetchExercisesData()
 }, [])

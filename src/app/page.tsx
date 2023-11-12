@@ -30,7 +30,9 @@ const theme = createTheme({
 
 export default function Home() {
   const [bodyPart, setbodyPart] = useState('all')
-  const [exercises, setexercises] = useState([])
+  const [exercises, setexercises] = useState<never[]>([]);
+
+  
 
   return (
     <ThemeProvider theme={theme}>

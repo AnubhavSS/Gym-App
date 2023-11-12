@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import styles from "../page.module.css";
-const ExerciseVideos: FC = ({ exerciseVideos, name }) => {
+const ExerciseVideos: FC<any> = ({ exerciseVideos, name }) => {
 
   return (
     <Box sx={{ marginTop: { lg: "203px", xs: "20px" } }} p="20px">
@@ -29,8 +29,8 @@ const ExerciseVideos: FC = ({ exerciseVideos, name }) => {
         exercise videos
       </Typography>
       <Grid container spacing={2} mx={'auto'} >
-        {exerciseVideos?.slice(0, 3)?.map((item, index) => (
-          <Grid item xs={12} md={6} lg={4}>
+        {exerciseVideos?.slice(0, 3)?.map((item:any, index:number) => (
+          <Grid item xs={12} md={6} lg={4} key={index}>
             <a
               key={index}
               className={styles.exerciseVideo}

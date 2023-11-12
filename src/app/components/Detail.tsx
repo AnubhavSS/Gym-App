@@ -7,7 +7,7 @@ interface DETAIL{
   exerciseDetail:searchData;
 }
 
-const Detail:FC<DETAIL> = ({exerciseDetail}) => {
+const Detail:FC<any> = ({exerciseDetail}) => {
    
     const {bodyPart, gifUrl, name, target, equipment,instructions }=exerciseDetail;
   return (
@@ -32,15 +32,15 @@ const Detail:FC<DETAIL> = ({exerciseDetail}) => {
         <Typography sx={{ fontSize: { lg: '54px', xs: '30px' } }} color={"#3073c9"}  fontWeight={700} textTransform="capitalize">
           {name}
         </Typography>
-        <Typography sx={{ fontSize: { lg: '24px', xs: '18px' } }} color={"#3073c9"} >
+        <Typography sx={{ fontSize: { lg: '24px', xs: '18px' } }} color={"#FFF"} >
           Exercises keep you strong.{' '}
           <span style={{ textTransform: 'capitalize' }}>{name}</span>  is one
           of the best <br /> exercises to target your {target}.
         </Typography>
 
         <Typography variant='h4' color={"#3073c9"}  fontWeight={700}>Instructions</Typography>
-        {instructions?.map((item) => (
-          <Stack key={item?.name} direction="row" gap="24px" alignItems="center">
+        {instructions?.map((item:any) => (
+          <Stack key={instructions.indexOf(item)+1} direction="row" gap="24px" alignItems="center">
           
             <Typography textTransform="capitalize" sx={{ fontSize: { lg: '25px', xs: '17px' },background: '#FFF2DB',p:1, borderRadius:10 }}>
              {instructions.indexOf(item)+1}&rarr; {item}

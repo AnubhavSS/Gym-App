@@ -8,7 +8,7 @@ import ExerciseCard from './ExerciseCard'
 import { searchData } from '../utils/types'
 
 interface Exerc {
-  setexercises: (exercise: string) => void;
+  setexercises: (exercise: any) => void;
   bodyPart: string;
   exercises: searchData[];
 }
@@ -47,7 +47,7 @@ const Exercises:FC<Exerc> = ({setexercises,exercises,bodyPart}) => {
     }
 
     fetchExercisesData()
-  }, [bodyPart])
+  }, [bodyPart]) // eslint-disable-line no-use-before-define
   
   return (
     <Box id="exercises" sx={{mt:{lg:'110px'}}} p={'20px'} mt={'50px'}>

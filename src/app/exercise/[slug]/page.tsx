@@ -11,7 +11,7 @@ import { searchData } from '@/app/utils/types'
 
 const ExerciseDetail = ({ params }: { params: { slug: string } }) => {
 
-  const [exerciseDetail, setexerciseDetail] = useState({})
+  const [exerciseDetail, setexerciseDetail] = useState<any>({})
   const [exerciseVideos, setExerciseVideos] = useState([]);
   const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
   const [equipmentExercises, setEquipmentExercises] = useState([]);
@@ -37,7 +37,7 @@ const ExerciseDetail = ({ params }: { params: { slug: string } }) => {
   fetchExcersiseData()
    
   }, [params.slug])
-  
+  console.log(exerciseDetail)
   return (
     <Box>
       <Detail exerciseDetail={exerciseDetail}/>
